@@ -67,20 +67,19 @@ startbtn.grid(column=2, row=1)
 def openys():
     os.system(yspath+"\genshinimpact.exe")
     os.system(yspath+"\yuanshen.exe")
+    os.system("./res/grasscutter/启动.bat")
 startbtn = Button(window, text="启动", command=openys)
 startbtn.grid(column=3, row=1)
 
 
 #下载割草机
 def downloadgc():
+    messagebox.showinfo("提示", "即将从github下载割草机，请耐心等待，出现未响应为正常现象")
+    feedback("downloadgc start")
+    wget.download("https://github.com/azheea/grasscutter-azhe/releases/download/Azhe3155/Azhe3155.zip","./res/grasscutter")
+    feedback("downloadgc done")
+    messagebox.showinfo("提示", "下载完成，请手动解压")
     
-    feedback("zipstart")
-
-    fz = zipfile.ZipFile(./res/grasscutter/Azhe3155.zip, 'r')
-    for file in fz.namelist():
-        fz.extract(file, ./res/grasscutter/Azhe3155)  
-    feedback("zip done")
-
 startbtn = Button(window, text="下载割草机", command=downloadgc)
 startbtn.grid(column=0, row=2)
 
