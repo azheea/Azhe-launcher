@@ -11,7 +11,7 @@ from tkinter import messagebox
 
 
 #基础设置
-vision = "1.0.0"
+vision = "1.0.1"
 gcvision = "3155"
 yspath = ""
 
@@ -104,6 +104,8 @@ startbtn.grid(column=6, row=1)
 
 
 #下载割草机
+
+#从github下载
 def downloadgc():
     messagebox.showinfo("提示", "即将从github下载割草机，请耐心等待，出现未响应为正常现象")
     feedback("downloadgc start")
@@ -111,8 +113,20 @@ def downloadgc():
     feedback("downloadgc done")
     messagebox.showinfo("提示", "下载完成，请手动解压")
     
-startbtn = Button(window, text="下载割草机", command=downloadgc)
+startbtn = Button(window, text="下载割草机(自github)", command=downloadgc)
 startbtn.grid(column=0, row=2)
+
+#从github下载
+def downloadgc():
+    messagebox.showinfo("提示", "即将从啊这云盘下载割草机，请耐心等待，出现未响应为正常现象")
+    feedback("downloadgc start")
+    wget.download("http://117.50.186.115:6010/api/alien/download/ceeaf2dd-435d-471e-6d5b-37b09ec6573c/Azhe3155.zip","./grasscutter")
+    feedback("downloadgc done")
+    messagebox.showinfo("提示", "下载完成，请手动解压")
+    
+startbtn = Button(window, text="下载割草机(自啊这的服务器，不建议使用)", command=downloadgc)
+startbtn.grid(column=1, row=2)
+
 
 
 
