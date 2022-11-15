@@ -4,8 +4,12 @@
 ## 构建
 环境:
 [pyton3.8](https://www.python.org/)(或更高)
+
+
 使用的库:
+
 tkinter
+
 configparser
 
 
