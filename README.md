@@ -1,9 +1,12 @@
 # Azhe-launcher
 某动漫游戏启动器
-欸嘿
 
-这个项目的前生是我用易语言写的啊这启动器
-新手第一次写 能跑就行
+## 构建
+环境:
+[pyton3.8](https://www.python.org/)(或更高)
+使用的库:
+tkinter
+configparser
 
 
 ### 我的[QQ频道](https://pd.qq.com/s/3jqlah/)
